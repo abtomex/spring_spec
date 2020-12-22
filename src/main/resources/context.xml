@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+
+">
+
+    <bean id="point" class="figures.Point">
+        <constructor-arg name="xCoordinate" value="10"/>
+        <constructor-arg name="yCoordinate" value="20"/>
+    </bean>
+
+    <bean id="circle" class="figures.Circle">
+        <property name="xCoordinate" value="15"/>
+        <property name="yCoordinate" value="25"/>
+        <property name="radius" value="40"/>
+    </bean>
+
+    <util:list id="figures" value-type="figures.IFigure">
+        <bean class="figures.Circle">
+            <property name="radius" value="10"/>
+            <property name="xCoordinate" value="20"/>
+            <property name="yCoordinate" value="20"/>
+        </bean>
+        <bean class="figures.Circle">
+            <property name="radius" value="20"/>
+            <property name="xCoordinate" value="30"/>
+            <property name="yCoordinate" value="30"/>
+        </bean>
+        <bean class="figures.Circle">
+            <property name="radius" value="30"/>
+            <property name="xCoordinate" value="40"/>
+            <property name="yCoordinate" value="40"/>
+        </bean>
+        <bean class="figures.Circle">
+            <property name="radius" value="40"/>
+            <property name="xCoordinate" value="50"/>
+            <property name="yCoordinate" value="50"/>
+        </bean>
+        <bean class="figures.Point">
+            <property name="xCoordinate" value="50"/>
+            <property name="yCoordinate" value="50"/>
+        </bean>
+        <bean class="figures.Point">
+            <property name="xCoordinate" value="50"/>
+            <property name="yCoordinate" value="50"/>
+        </bean>
+
+
+    </util:list>
+
+    <bean id="scene" class="figures.Scene">
+        <property name="color" value="green"/>
+        <property name="figures" ref="figures"/>
+
+    </bean>
+
+</beans>
