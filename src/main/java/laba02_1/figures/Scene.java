@@ -1,4 +1,4 @@
-package figures;
+package laba02_1.figures;
 
 import java.util.List;
 

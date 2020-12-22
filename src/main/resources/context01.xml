@@ -8,43 +8,43 @@
 
 ">
 
-    <bean id="point" class="figures.Point">
+    <bean id="point" class="laba01.figures.Point">
         <constructor-arg name="xCoordinate" value="10"/>
         <constructor-arg name="yCoordinate" value="20"/>
     </bean>
 
-    <bean id="circle" class="figures.Circle">
+    <bean id="circle" class="laba01.figures.Circle">
         <property name="xCoordinate" value="15"/>
         <property name="yCoordinate" value="25"/>
         <property name="radius" value="40"/>
     </bean>
 
-    <util:list id="figures" value-type="figures.IFigure">
-        <bean class="figures.Circle">
+    <util:list id="figures" value-type="laba01.figures.IFigure">
+        <bean class="laba01.figures.Circle">
             <property name="radius" value="10"/>
             <property name="xCoordinate" value="20"/>
             <property name="yCoordinate" value="20"/>
         </bean>
-        <bean class="figures.Circle">
+        <bean class="laba01.figures.Circle">
             <property name="radius" value="20"/>
             <property name="xCoordinate" value="30"/>
             <property name="yCoordinate" value="30"/>
         </bean>
-        <bean class="figures.Circle">
+        <bean class="laba01.figures.Circle">
             <property name="radius" value="30"/>
             <property name="xCoordinate" value="40"/>
             <property name="yCoordinate" value="40"/>
         </bean>
-        <bean class="figures.Circle">
+        <bean class="laba01.figures.Circle">
             <property name="radius" value="40"/>
             <property name="xCoordinate" value="50"/>
             <property name="yCoordinate" value="50"/>
         </bean>
-        <bean class="figures.Point">
+        <bean class="laba01.figures.Point">
             <property name="xCoordinate" value="50"/>
             <property name="yCoordinate" value="50"/>
         </bean>
-        <bean class="figures.Point">
+        <bean class="laba01.figures.Point">
             <property name="xCoordinate" value="50"/>
             <property name="yCoordinate" value="50"/>
         </bean>
@@ -52,7 +52,7 @@
 
     </util:list>
 
-    <bean id="scene" class="figures.Scene">
+    <bean id="scene" class="laba01.figures.Scene">
         <property name="color" value="green"/>
         <property name="figures" ref="figures"/>
 
