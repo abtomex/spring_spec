@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="laba02.figures"/>
+
+<!--
+    <bean name="coords" class="laba02.figures.Coords">
+        <constructor-arg name="xCoordinate" value="45"/>
+        <constructor-arg name="yCoordinate" value="15"/>
+    </bean>
+
+    <bean name="centreCoords" class="laba02.figures.Coords">
+        <constructor-arg name="xCoordinate" value="250"/>
+        <constructor-arg name="yCoordinate" value="100"/>
+    </bean>
+-->
+
+</beans>

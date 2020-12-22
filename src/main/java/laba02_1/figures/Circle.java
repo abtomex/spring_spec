@@ -1,20 +1,22 @@
-package figures;
+package laba02_1.figures;
 
-public class Point implements IFigure {
+public class Circle implements IFigure {
 
     private int xCoordinate;
     private int yCoordinate;
+    private int radius;
 
     public void draw() {
-        System.out.printf("Рисуем точку в x=%d, y=%d\n", getxCoordinate(), getxCoordinate());
+        System.out.printf("Рисуем окружность в x=%d, y=%d, радиусом=%d\n", getxCoordinate(), getxCoordinate(), getRadius());
     }
 
-    public Point(int xCoordinate, int yCoordinate) {
+    public Circle(int xCoordinate, int yCoordinate, int radius) {
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;
+        this.radius = radius;
     }
 
-    public Point() {}
+    public Circle() {}
 
     public int getxCoordinate() {
         return xCoordinate;
@@ -32,11 +34,20 @@ public class Point implements IFigure {
         this.yCoordinate = yCoordinate;
     }
 
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
     @Override
     public String toString() {
-        return "Point{" +
+        return "Circle{" +
                 "xCoordinate=" + xCoordinate +
                 ", yCoordinate=" + yCoordinate +
+                ", radius=" + radius +
                 '}';
     }
 }
